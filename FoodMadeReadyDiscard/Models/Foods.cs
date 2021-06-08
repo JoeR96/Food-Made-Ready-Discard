@@ -9,9 +9,11 @@ namespace FoodMadeReadyDiscard.Models
     class Foods
     {
         public int Id { get; set; }
+        public int ProductCode { get; set; }
         public string Name { get; set; }
         public int DefrostDuration { get; set; }
         public int ShelfLifeHours { get; set; }
-       
+        public string Category { get; set; }
+
     }
 }

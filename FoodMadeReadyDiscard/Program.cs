@@ -5,15 +5,19 @@ using System.Linq;
 
 namespace FoodMadeReadyDiscard
 {
+
     class Program
     {
         static FoodDataContext context = new FoodDataContext();
+        static FileReader fileReader = new FileReader();
 
+        static string userInput;
         static void Main(string[] args)
         {
-            AddTheTrinityOfMeat();
+            FileReader.ReadFile();
+            Console.ReadLine();
+            //MainMenu();
         }
-
         private static void AddTheTrinityOfMeat()
         {
             Foods Ham = new Foods()
@@ -63,6 +67,7 @@ namespace FoodMadeReadyDiscard
             context.Add(newFood);
             context.SaveChanges();
 
+            MainMenu();
         }
         static void RemoveFromDatabase(int foodId)
         {
@@ -77,6 +82,8 @@ namespace FoodMadeReadyDiscard
 
             context.Foods.Remove(toRemove);
             context.SaveChanges();
+
+            MainMenu();
         }
         static void RemoveFromDatabase(string name)
         {
@@ -91,20 +98,92 @@ namespace FoodMadeReadyDiscard
 
             context.Foods.Remove(toRemove);
             context.SaveChanges();
+
+            MainMenu();
         }
         static void PrintAllAlphabetically()
         {
             var foods = context.Foods.OrderBy(d => d.Name);
             foreach(var f in foods)
             {
-                Console.WriteLine(f.Name + f.DefrostDuration + f.ShelfLifeHours);
+                Console.WriteLine(f.Name + " " + f.DefrostDuration + " " + f.ShelfLifeHours + " " + f.Id);
             }
+
+            MainMenu();
         }
         static void ReturnShelfLife(Foods food)
         {
             Console.WriteLine("Made: " + DateTime.Now);
             Console.WriteLine("Ready: " + DateTime.Now.AddHours(food.DefrostDuration));
             Console.WriteLine("Discard: " + DateTime.Now.AddHours(food.DefrostDuration + food.ShelfLifeHours));
+            MainMenu();
+        }
+        static void MainMenu()
+        {
+
+            Console.WriteLine("Please input the option number");
+            Console.WriteLine("1 Print all llphabetically");
+            Console.WriteLine("2 Add to database");
+            Console.WriteLine("3 Remove from database");
+            Console.WriteLine("4 Remove Duplicates from the database");
+            Console.WriteLine("5 Quit Application");
+            userInput = Console.ReadLine();
+
+            if (userInput == "1")
+                PrintAllAlphabetically();
+
+            if (userInput == "2")
+                AddToDataBase();
+
+            if (userInput == "3")
+                RemoveWithIdOrName();
+
+            if (userInput == "4")
+                RemoveDuplicatesWithName();
+
+            if (userInput == "5")
+                Environment.Exit(0);
+
+
+            
+        }
+        private static void RemoveWithIdOrName()
+        {
+            Console.WriteLine("Please enter the name or the Id of the food you would like to remove");
+            string userInput = Console.ReadLine();
+
+            if (userInput.All(char.IsDigit))
+                RemoveFromDatabase(Int32.Parse(userInput));
+
+            else
+                RemoveFromDatabase(userInput);
+        } 
+        private static void RemoveDuplicatesWithName()
+        {
+            Console.WriteLine("Please enter the name or the Id of the foods you would like to remove");
+            string userInput = Console.ReadLine();
+
+            RemoveDuplicatesFromDatabase(userInput);
+        }
+        private static void RemoveDuplicatesFromDatabase(string name)
+        {
+            Foods[] toRemove = context.Foods.Where(d => d.Name == name).Skip(1).ToArray();
+         
+
+            if (toRemove == null)
+            {
+                Console.WriteLine("Please enter a valid product Id");
+                return;
+            }
+
+            for (int i = 0; i < toRemove.Length; i++)
+            {
+                context.Remove(toRemove[i]);
+            }
+            
+            context.SaveChanges();
+
+            MainMenu();
         }
     }
 }
