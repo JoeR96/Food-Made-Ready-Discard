@@ -11,11 +11,10 @@ namespace FoodMadeReadyDiscard
 
         static void Main(string[] args)
         {
-
-            AddTheHolyTrinityOfMeat();
+            AddTheTrinityOfMeat();
         }
 
-        private static void AddTheHolyTrinityOfMeat()
+        private static void AddTheTrinityOfMeat()
         {
             Foods Ham = new Foods()
             {
@@ -43,16 +42,8 @@ namespace FoodMadeReadyDiscard
             context.SaveChanges();
             ReturnShelfLife(Chicken);
         }
-        static void QueryExample()
-        {
-            var products = context.Foods.Where(d => d.DefrostDuration >= 2)
-                .OrderBy(d => d.Name);
 
-            foreach(var p in products)
-            {
-                //do something
-            }
-        }
+        //Need to add validation checks for the integer values
         static void AddToDataBase()
         {
             Console.WriteLine("Please input the name of the food product");
@@ -73,13 +64,13 @@ namespace FoodMadeReadyDiscard
             context.SaveChanges();
 
         }
-        static void RemoveFromDatabase(int index)
+        static void RemoveFromDatabase(int foodId)
         {
-            Foods toRemove = context.Foods.Find(index);
+            Foods toRemove = context.Foods.Find(foodId);
 
             if (toRemove == null)
             {
-                Console.WriteLine("Please enter a valid index");
+                Console.WriteLine("Please enter a valid product Id");
                 return;
             }
                 
@@ -93,7 +84,7 @@ namespace FoodMadeReadyDiscard
 
             if (toRemove == null)
             {
-                Console.WriteLine("Please input the correct name");
+                Console.WriteLine("Please input the correct product name");
                 return;
             }
                 
