@@ -1,4 +1,5 @@
-﻿using FoodMadeReadyDiscard.Models;
+﻿using FoodMadeReadyDiscard.Data;
+using FoodMadeReadyDiscard.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,21 +11,24 @@ namespace FoodMadeReadyDiscard
 {
     class FileReader
     {
-        public static List<string[]> ReadFile()
+
+        public List<String[]> Products = new List<String[]>();
+        public FileReader(string category)
         {
-            List<string[]> Products = new List<string[]>();
-            var FileLines = File.ReadAllLines(@"data\Starters").ToList();
- 
+            ReadFile(category);
+        }
 
-            foreach (string line in FileLines)
+        public void ReadFile(string category)
+        {
+            
+            var FileLines = File.ReadAllLines(@"data\"+category).ToList();
+
+            for (int i = 1; i < FileLines.Count; i++)
             {
-                string[] split = line.Split(',');
+                string[] split = FileLines[i].Split(',');
                 Products.Add(split);
-                Console.WriteLine(split[0]);
-
             }
 
-            return Products;
         }
     }
 }

@@ -1,4 +1,3 @@
-  
 Chicken Strips,24,72,Starter,1.
 Chicken Bites,24,72,Starter,2.
 Chicken Wings,24,72,Starter,3.
