@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jbi+w8JanlE1xDt6ucVJ7+G/1dCKVZZo0h+E9nMMfZhZxxTVUQYUjY43uHsI+BPF37e7zFQEtunSoUmUo+YsSw==",
+  "dgSpecHash": "GI0mdUSqSfNGUztaMUBVoclAZifiWAWOp46o4vGz3K+PCZ+b220MjV4eC5TWWg3+SuL1sFWDuS+FnPf+UIkBjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Joe\\source\\repos\\FoodMadeReadyDiscard\\Food-Made-Ready-Discard\\FoodMadeReadyDiscard\\FoodMadeReadyDiscard.csproj",
+  "projectFilePath": "C:\\Users\\Joe\\source\\repos\\FoodMadeReadyDiscard\\Food-Made-Ready-Discard\\FoodMadeReadyDiscard\\FoodMrdConsoleApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Joe\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

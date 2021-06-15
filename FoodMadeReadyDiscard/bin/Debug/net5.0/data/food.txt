@@ -1,0 +1,66 @@
+Chicken Strips,24,72,Starter,1 
+Chicken Bites,24,72,Starter,2 
+Chicken Wings,24,72,Starter,3 
+Corn,24,2,Starter,4 
+Garlic Bread,24,72,Starter,5 
+Poppers,12,72,Starter,6
+Bacon,24,96,Meat,7
+Beef,24,144,Meat,8
+Chicken,24,144,Meat,9
+Ham,24,144,Meat,10
+Pepperoni,24,144,Meat,11
+Caramelised Onion,0,48,Topping,12
+Black Olives,0,72,Toppings,13
+Jackfruit,24,96,Toppings,14
+Jalapenos,0,336,Toppings,15
+Pineapple,0,120,Toppings,16
+Sliced Onions,0,48,Toppings,17
+Sliced Peppers,0,48,Toppings,18
+Mushrooms,0,168,Toppings,19
+Garlic Mushrooms,24,96,Toppings,20
+Sliced Cherry Tomatoes,0,24,Toppings,21
+Pepperphoni,24,144,Toppings,22
+Rocket/Spinach,0,48,Toppings,23
+Sweetcorn,0,48,Toppings,24
+Mozzarella,24,120,Cheese,28
+Three Cheese,24,120,Cheese,29
+String Cheese,48,96,Cheese,30
+Vegan Cheese String,0,168,Cheese,31
+Vegan Cheese ,0,168,Cheese,32
+Little Kids Pasta,24,96,Pasta,33
+Big Kids Pasta,24,96,Pasta,34
+Lasagne,24,96,Pasta,35
+Mac And Cheese,48,72,Pasta,36
+Bluffet Pasta,48,96,Pasta,37
+Table Ketchup,0,21,Sauces,38
+Table BBQ,0,21,Sauces,39
+BBQ Sauce,0,336,Sauces,40
+Seasoned Passata,1,24,Sauces,41
+Unseasoned Passta,0,24,Sauces,42
+Brownie,4,92,Desserts,43
+Vegan Cheesecake,4,120,Desserts,44
+Chocolate Chip Cookie Dough,24,336,Desserts,45
+Salted Caramel Cookie Dough,24,336,Desserts,46
+Triple Chocolate Cookie Dough,24,336,Desserts,47
+Chocolate ICF Sauce,0,336,Desserts,48
+Raspberry ICF Sauce,0,336,Desserts,49
+Milk,0,72,Desserts.Desserts,50
+Rowse Chocolate Sauce,0,0,Desserts,51
+Bacon Bits,0,672,Salad,52
+Uncut Whole Pepper,0,168,Salad,25
+Uncut Whole Onion,0,336,Salad,26
+Whole Cherry Tomatoes,0,168,Salad,27
+Potato Salad,0,48,Salad,53
+Coleslaw,0,48,Salad,54
+Salad Dressings,0,672,Salad,55
+Uncut Cucumber,0,120,Salad,56
+Cut Cucumber,0,48,Salad,57
+Sliced Onions,0,48,Salad,58
+Sliced Peppers,0,48,Salad,59
+Tortilla Chips,0,48,Salad,60
+Pre topped thin,0,6,Dough,61
+Pre topped non-thin,0,4,Dough,62
+AAT,24,33,Dough,63
+Pan,24,28,Dough,64
+Stuffed Crust,24,33,Dough,65
+Kids thin,4,27,Dough,66

@@ -2,7 +2,7 @@
 
 namespace FoodMadeReadyDiscard.Migrations
 {
-    public partial class initialDb : Migration
+    public partial class Initialize : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,9 +12,11 @@ namespace FoodMadeReadyDiscard.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductCode = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DefrostDuration = table.Column<int>(type: "int", nullable: false),
-                    ShelfLifeHours = table.Column<int>(type: "int", nullable: false)
+                    ShelfLifeHours = table.Column<int>(type: "int", nullable: false),
+                    Category = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

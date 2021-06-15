@@ -33,7 +33,7 @@ namespace FoodMadeReadyDiscard
         }
         public void AddFileOfFoodToDatabase()
         {
-            FileReader fileReader = new FileReader("Starters");
+            FileReader fileReader = new FileReader();
             List<string[]> foods = fileReader.Products;
 
             for (int i = 0; i < foods.Count; i++)
@@ -45,7 +45,6 @@ namespace FoodMadeReadyDiscard
             context.SaveChanges();
 
         }
-
         private Foods CreateFoodFromTextFileLine(string[] line)
         {
 
@@ -60,7 +59,6 @@ namespace FoodMadeReadyDiscard
 
             return newFood;
         }
-
         public void RemoveFromDatabase(int foodId)
         {
             Foods toRemove = context.Foods.Find(foodId);
@@ -126,7 +124,6 @@ namespace FoodMadeReadyDiscard
 
             context.SaveChanges();
         }
-
         private void RemoveDuplicatesFromDatabase(int productId)
         {
             Foods[] toRemove = context.Foods.Where(d => d.ProductCode == productId).Skip(1).ToArray();
@@ -137,7 +134,6 @@ namespace FoodMadeReadyDiscard
             }
             context.SaveChanges();
         }
-
         public void RemoveAllDuplicatesFromDatabase()
         {
             int maxId = context.Foods.Max(p => p.ProductCode);

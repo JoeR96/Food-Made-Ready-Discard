@@ -5803,9 +5803,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Joe\\source\\repos\\FoodMadeReadyDiscard\\Food-Made-Ready-Discard\\FoodMadeReadyDiscard\\FoodMadeReadyDiscard.csproj",
-      "projectName": "FoodMadeReadyDiscard",
-      "projectPath": "C:\\Users\\Joe\\source\\repos\\FoodMadeReadyDiscard\\Food-Made-Ready-Discard\\FoodMadeReadyDiscard\\FoodMadeReadyDiscard.csproj",
+      "projectUniqueName": "C:\\Users\\Joe\\source\\repos\\FoodMadeReadyDiscard\\Food-Made-Ready-Discard\\FoodMadeReadyDiscard\\FoodMrdConsoleApplication.csproj",
+      "projectName": "FoodMrdConsoleApplication",
+      "projectPath": "C:\\Users\\Joe\\source\\repos\\FoodMadeReadyDiscard\\Food-Made-Ready-Discard\\FoodMadeReadyDiscard\\FoodMrdConsoleApplication.csproj",
       "packagesPath": "C:\\Users\\Joe\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Joe\\source\\repos\\FoodMadeReadyDiscard\\Food-Made-Ready-Discard\\FoodMadeReadyDiscard\\obj\\",
       "projectStyle": "PackageReference",

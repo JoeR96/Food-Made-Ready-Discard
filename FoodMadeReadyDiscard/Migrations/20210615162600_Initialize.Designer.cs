@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FoodMadeReadyDiscard.Migrations
 {
     [DbContext(typeof(FoodDataContext))]
-    [Migration("20210608180150_CategoryAndCode")]
-    partial class CategoryAndCode
+    [Migration("20210615162600_Initialize")]
+    partial class Initialize
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

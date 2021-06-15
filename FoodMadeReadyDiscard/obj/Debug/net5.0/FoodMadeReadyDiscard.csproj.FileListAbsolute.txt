@@ -116,7 +116,6 @@ C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeR
 C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\obj\Debug\net5.0\FoodMadeReadyDiscard.csproj.AssemblyReference.cache
 C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\obj\Debug\net5.0\FoodMadeReadyDiscard.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\obj\Debug\net5.0\FoodMadeReadyDiscard.AssemblyInfoInputs.cache
 C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\obj\Debug\net5.0\FoodMadeReadyDiscard.AssemblyInfo.cs

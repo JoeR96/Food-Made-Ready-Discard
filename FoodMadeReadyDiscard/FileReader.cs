@@ -13,16 +13,14 @@ namespace FoodMadeReadyDiscard
     {
 
         public List<String[]> Products = new List<String[]>();
-        public FileReader(string category)
+        public FileReader()
         {
-            ReadFile(category);
+            ReadFile();
         }
-
-        public void ReadFile(string category)
-        {
-            
-            var FileLines = File.ReadAllLines(@"data\"+category).ToList();
-
+        public void ReadFile()
+        {        
+            var FileLines = File.ReadAllLines(@"data\food.txt").ToList();
+            Console.WriteLine(FileLines.Count);
             for (int i = 1; i < FileLines.Count; i++)
             {
                 string[] split = FileLines[i].Split(',');
