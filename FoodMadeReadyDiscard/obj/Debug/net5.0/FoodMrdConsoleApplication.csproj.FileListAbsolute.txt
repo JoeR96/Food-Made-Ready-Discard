@@ -62,3 +62,4 @@ C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeR
 C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\obj\Debug\net5.0\ref\FoodMrdConsoleApplication.dll
 C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\obj\Debug\net5.0\FoodMrdConsoleApplication.pdb
 C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\obj\Debug\net5.0\FoodMrdConsoleApplication.genruntimeconfig.cache
+C:\Users\Joe\source\repos\FoodMadeReadyDiscard\Food-Made-Ready-Discard\FoodMadeReadyDiscard\bin\Debug\net5.0\Microsoft.Extensions.Http.dll

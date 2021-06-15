@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GI0mdUSqSfNGUztaMUBVoclAZifiWAWOp46o4vGz3K+PCZ+b220MjV4eC5TWWg3+SuL1sFWDuS+FnPf+UIkBjg==",
+  "dgSpecHash": "Xmu3UuCw4QlAhbIHujyxBg1EuFWPUb3W+MDNdtLQNjlHSTg9ES4bvGayVfx3/1IgjJB13LbZghT7h0ZwP9Dwcw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Joe\\source\\repos\\FoodMadeReadyDiscard\\Food-Made-Ready-Discard\\FoodMadeReadyDiscard\\FoodMrdConsoleApplication.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\Joe\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Joe\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\Joe\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Joe\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
     "C:\\Users\\Joe\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\Joe\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Joe\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",

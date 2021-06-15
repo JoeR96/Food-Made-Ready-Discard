@@ -1,8 +1,12 @@
 ﻿using FoodMadeReadyDiscard.Data;
 using FoodMadeReadyDiscard.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Json;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace FoodMadeReadyDiscard
 {
@@ -11,30 +15,14 @@ namespace FoodMadeReadyDiscard
     {
         static FoodDataContext context = new FoodDataContext();
         static DatabaseOperations databaseOperations = new DatabaseOperations();
-        static string userInput;
-        static void Main(string[] args)
+        static readonly HttpClient client = new HttpClient();
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("hi");
+            await ProcessFoodProducts();
             MainMenu();
-            HttpClient client = new HttpClient();
-            var foodsResponseTask = client.GetAsync("http://localhost:38953/api/foods");
-            foodsResponseTask.Wait();
-            Console.WriteLine("hi");
-            if (foodsResponseTask.IsCompleted)
-            {
-                var result = foodsResponseTask.Result;
-                if(result.IsSuccessStatusCode)
-                {
-                    var foods = result.Content.ReadAsStringAsync();
-                    foods.Wait();
-                    Console.WriteLine(foods.Result);
-                    Console.WriteLine(foods.Result.Length);
-                    Console.ReadLine();
-                }
-                
-            }
-            Console.WriteLine(foodsResponseTask.Result);
-            Console.WriteLine("hi");
+            
+            
+     
         }
         static void MainMenu()
         {
@@ -133,6 +121,15 @@ namespace FoodMadeReadyDiscard
         private static void AddData()
         {
             databaseOperations.AddFileOfFoodToDatabase();
+        }
+        static async Task ProcessFoodProducts()
+        {
+            var stringTask = client.GetStreamAsync("http://localhost:38953/api/foods/Dough");
+            var foods = await JsonSerializer.DeserializeAsync<List<Foods>>(await stringTask);
+            foreach(var starter in foods)
+            {
+                ReturnShelfLife(starter);
+            }
         }
     }
 }
