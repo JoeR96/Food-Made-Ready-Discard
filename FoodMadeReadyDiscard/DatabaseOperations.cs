@@ -47,7 +47,6 @@ namespace FoodMadeReadyDiscard
         }
         private Foods CreateFoodFromTextFileLine(string[] line)
         {
-
             Foods newFood = new Foods()
             {
                 Name = line[0],
@@ -56,7 +55,6 @@ namespace FoodMadeReadyDiscard
                 Category = line[3],
                 ProductCode = Int32.Parse(line[4]),
             };
-
             return newFood;
         }
         public void RemoveFromDatabase(int foodId)
@@ -68,8 +66,6 @@ namespace FoodMadeReadyDiscard
                 Console.WriteLine("Please enter a valid product Id");
                 return;
             }
-
-
             context.Foods.Remove(toRemove);
             context.SaveChanges();
 
@@ -83,8 +79,6 @@ namespace FoodMadeReadyDiscard
                 Console.WriteLine("Please input the correct product name");
                 return;
             }
-
-
             context.Foods.Remove(toRemove);
             context.SaveChanges();
         }

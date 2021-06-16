@@ -13,9 +13,11 @@ namespace FoodMadeReadyDiscard
 
     class Program
     {
+        static List<Foods> foods;
         static FoodDataContext context = new FoodDataContext();
         static DatabaseOperations databaseOperations = new DatabaseOperations();
         static readonly HttpClient client = new HttpClient();
+        static string currentCategory = "";
         static async Task Main(string[] args)
         {
             await ProcessFoodProducts();
@@ -57,12 +59,8 @@ namespace FoodMadeReadyDiscard
         {
             Console.WriteLine("Please input the option number");
             Console.WriteLine("1 Print all allphabetically");
-            Console.WriteLine("2 Add to database");
-            Console.WriteLine("3 Remove from database");
-            Console.WriteLine("4 Remove Duplicates from the database");
-            Console.WriteLine("6 Add data from starters text file");
-            Console.WriteLine("6 Print All Starters");
-            Console.WriteLine("7 Exit application");
+            Console.WriteLine("2 Print a category");
+            Console.WriteLine("3 Exit application");
         }
         private static void SelectUserInput(int userInput)
         {
@@ -70,22 +68,11 @@ namespace FoodMadeReadyDiscard
                 PrintAllAlphabetically();
 
             if (userInput == 2)
-            {
-                databaseOperations.RemoveAllDuplicatesFromDatabase();
-            }
+                ChooseCategory();
+            
+
+
             if (userInput == 3)
-                databaseOperations.RemoveWithIdOrName();
-
-            if (userInput == 4)
-                databaseOperations.RemoveDuplicatesWithName();
-
-            if (userInput == 5)
-                AddData();
-
-            if (userInput == 6)
-                PrintCategory("Starter");
-
-            if (userInput == 7)
                 Environment.Exit(0);
         }  
         private static void ReturnToMain()
@@ -104,14 +91,27 @@ namespace FoodMadeReadyDiscard
             }
            
         }
+        static void ChooseCategory()
+        {
+            Console.WriteLine("Please input the name of the category");
+            Console.WriteLine("Starter");
+            Console.WriteLine("Meat");
+            Console.WriteLine("Toppings");
+            Console.WriteLine("Dough");
+            Console.WriteLine("Desserts");
+            Console.WriteLine("Salads");
+            Console.WriteLine("Sauces");
+            Console.WriteLine("Return");
+            var userInput = Console.ReadLine();
+            PrintCategory(userInput);
+        }
         static void PrintCategory(string category)
         {
-            var foods = context.Foods.Where(d => d.Category == category).ToArray();
-            foreach (var food in foods)
+            foreach (var food in foods.Where(d => d.Category == category))
             {
                 ReturnShelfLife(food);
             }
-          ;
+            ReturnToMain();
         }
         static void ReturnShelfLife(Foods food)
         {
@@ -124,12 +124,8 @@ namespace FoodMadeReadyDiscard
         }
         static async Task ProcessFoodProducts()
         {
-            var stringTask = client.GetStreamAsync("http://localhost:38953/api/foods/Dough");
-            var foods = await JsonSerializer.DeserializeAsync<List<Foods>>(await stringTask);
-            foreach(var starter in foods)
-            {
-                ReturnShelfLife(starter);
-            }
+            var stringTask = client.GetStreamAsync("http://localhost:38953/api/foods");
+            foods = await JsonSerializer.DeserializeAsync<List<Foods>>(await stringTask);
         }
     }
 }
